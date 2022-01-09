@@ -4,7 +4,9 @@ from django.http import HttpResponse
 # Create your views here.
 
 def index(request):
-    return render(request, 'pages/index.html')
+    x = {'name':'ali',
+    'age':25}
+    return render(request, 'pages/index.html', x)
 
 def about(request):
-    pass   
+    return render(request, 'pages/about.html')   
