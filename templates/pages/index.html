@@ -8,8 +8,24 @@
 </head>
 <body>
     {% extends 'base.html' %}
-    <p>his name ={{name}}</p>
-    <p>his age ={{age}}</p>
-    
+   
+    {%  block content  %}
+        <h1>his name ={{name}}</h1>
+        <h1>his age ={{age}}</h1>
+
+
+        {%  if name == 'ali' %}
+            <p style="color:green;"> hello ali </p>
+
+        {%  elif name == 'mohammed' %}
+            <p> hello mohammed </p>
+        {% endif %}
+
+
+        {% for x in name %}
+	        <p> {{ x }} </p>
+        {% endfor  %}
+
+    {%  endblock content %}
 </body>
 </html>
