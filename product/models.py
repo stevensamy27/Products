@@ -3,6 +3,7 @@ from pickle import TRUE
 from statistics import mode
 from unicodedata import category, name
 from django.db import models
+from datetime import datetime
 
 # Create your models here. (Your tables on fatabase)
 class Product(models.Model):
@@ -35,3 +36,9 @@ class Product(models.Model):
         ordering = ['name']
 
 
+
+
+class Test(models.Model):
+    date =  models.DateField()
+    time = models.TimeField(null=True)
+    created = models.DateTimeField(  default=datetime.now )
