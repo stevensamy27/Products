@@ -10,7 +10,7 @@ def product(request):
 
 def products(request):
     a = Product.objects.all()
-    x = {'pro':a.filter(name__contains = 'o')}
+    x = {'pro':a}
     return render(request, 'product/products.html',x )
 
 

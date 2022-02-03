@@ -63,4 +63,8 @@ class Person(models.Model):
 
     relation = models.ManyToManyField(Video, null=True)
     def __str__(self) -> str:
-        return self.name
+        return self.name 
+
+
+class Login(models.Model):
+    username = models
