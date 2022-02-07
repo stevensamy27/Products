@@ -67,4 +67,5 @@ class Person(models.Model):
 
 
 class Login(models.Model):
-    username = models
+    username = models.CharField(max_length=50)
+    passwprd = models.CharField(max_length=50)
