@@ -12,7 +12,7 @@ def index(request):
 def about(request):
     username = request.POST.get('username')
     password = request.POST.get('password')
-    data = Login(username, password)
+    data = Login(username = username, password= password)
     data.save()
     
-    return render(request, 'pages/about.html')   
+    return render(request, 'pages/about.html')    
