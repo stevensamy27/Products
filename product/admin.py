@@ -8,6 +8,7 @@ class ProductAdmin(admin.ModelAdmin):
     list_display_link = ['price']
     list_editable = ['category']
     
+    
 
 admin.site.register(Product,  ProductAdmin) 
 admin.site.register(Test)
